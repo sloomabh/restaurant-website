@@ -12,7 +12,6 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  border: 2px red solid;
 }
 
 .app__navbar-logo img {
@@ -20,7 +19,6 @@
 }
 
 .app__navbar-links {
-  border: 2px red solid;
   flex: 1;
   display: flex;
   justify-content: center;
@@ -32,7 +30,6 @@
 .app__navbar-links li {
   margin: 0 1rem;
   cursor: pointer;
-  border: 2px rgb(37, 226, 53) solid;
 }
 
 .app__navbar-links li:hover {
@@ -43,7 +40,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  border: 2px red solid;
 }
 
 .app__navbar-login a {
