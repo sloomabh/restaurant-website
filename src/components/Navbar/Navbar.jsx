@@ -7,6 +7,15 @@ import "./Navbar.css";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+
+  const openMenu = () => {
+    setToggleMenu(true);
+  };
+
+  const closeMenu = () => {
+    setToggleMenu(false);
+  };
+
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
@@ -39,41 +48,37 @@ const Navbar = () => {
         </a>
       </div>
       <div className="app__navbar-smallscreen">
-        <GiHamburgerMenu
-          color="#fff"
-          fontSize={27}
-          onClick={() => setToggleMenu(true)}
-        />
+        <GiHamburgerMenu color="#fff" fontSize={27} onClick={openMenu} />
         {toggleMenu && (
           <div className="app__navbar-smallscreen_overlay flex__center slide-bottom">
             <MdOutlineRestaurantMenu
               fontSize={27}
               className="overlay__close"
-              onClick={() => setToggleMenu(false)}
+              onClick={closeMenu}
             />
             <ul className="app__navbar-smallscreen_links">
               <li>
-                <a href="#home" onClick={() => setToggleMenu(false)}>
+                <a href="#home" onClick={closeMenu}>
                   Home
                 </a>
               </li>
               <li>
-                <a href="#about" onClick={() => setToggleMenu(false)}>
+                <a href="#about" onClick={closeMenu}>
                   About
                 </a>
               </li>
               <li>
-                <a href="#menu" onClick={() => setToggleMenu(false)}>
+                <a href="#menu" onClick={closeMenu}>
                   Menu
                 </a>
               </li>
               <li>
-                <a href="#awards" onClick={() => setToggleMenu(false)}>
+                <a href="#awards" onClick={closeMenu}>
                   Awards
                 </a>
               </li>
               <li>
-                <a href="#contact" onClick={() => setToggleMenu(false)}>
+                <a href="#contact" onClick={closeMenu}>
                   Contact
                 </a>
               </li>
